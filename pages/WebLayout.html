@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Flex box example</title>
+        <link rel="shortcut icon" href="../assets/fav.png">
+        <style>
+            * {
+              box-sizing: border-box; 
+            }
+            body {
+              display: flex;
+              min-height: 100vh;
+              flex-direction: row;
+              margin: 0;
+            }
+            .outer-col-1 {
+              background: #D7E8D4;
+              flex: 1;
+            }
+            .outer-col-2 {
+              display: flex;
+              flex-direction: column;
+              flex: 5;
+            }
+            .inner-row {
+              display: flex;
+              flex-direction: row;
+            }
+            .inner-col {
+              flex: 4;
+            }
+            .inner-row article {
+              min-height: 6vh;
+            }
+            .inner-row aside {
+              background: beige;
+              flex: 1;
+            }
+            header, footer {
+              background: yellowgreen;
+              height: 20vh;
+            }
+            header, footer, article, nav, aside {
+              padding: 1em;
+            }
+            .headerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background-color: tomato;
+                font-weight: bold;
+                font-size: 2em;
+                padding: 10px;
+            }
+          </style>
+    </head>
+    <body>
+        <nav class="outer-col-1">Nav</nav>
+  <div class="outer-col-2">
+  	<header class="headerContainer">Header</header>
+    <div class="inner-row">
+      <div class="inner-col">
+          <section>
+            <article>
+                <h2>Flex box</h2>
+                <p>he Flexbox Layout (Flexible Box) module (a W3C Candidate Recommendation as of October 2017) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).</p>
+            </article>
+            <article>
+                <h2>Flex container/parent</h2>
+                <p>This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.\nThis establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
+            </article>
+            <article>
+                <h2>Flex item/child</h2>
+                <p>By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container.</p>
+            </article>
+          </section>
+  		<footer>Footer</footer>
+      </div>
+    	<aside>Aside</aside>
+    </div>
+  </div>
+    </body>
+</html>
